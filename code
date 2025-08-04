@@ -1,0 +1,21 @@
+import pandas as pd
+df = pd.read_csv("marketing_campaign.csv")
+print(df.head());
+print("Basic Info:")
+print(df.info())
+
+print("Descriptive Statistics:")
+print(df.describe(include='all'))
+
+print("Column-wise Null Count:")
+print(df.isnull().sum())
+
+print("Column-wise Unique Value Count:")
+print(df.nunique())
+
+duplicates = df[df.duplicated()]
+print(duplicates.head())
+
+df = df.drop_duplicates()
+df=df.dropna();
+
