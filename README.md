@@ -8,7 +8,8 @@ Cleaned marketing dataset; removed duplicates, filled missing income, fixed shif
 - Converted 'dt_customer' to proper date format
 - Standardized column names to lowercase with underscores
 - splits the  column header names by using split text to columns
-- 
+- Cleaned and unified categorical value
+- Trimmed whitespaces from string column
 
 
 
