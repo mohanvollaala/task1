@@ -1,22 +1,14 @@
 # task1 
-import pandas as pd
-df = pd.read_csv("marketing_campaign.csv")
-print(df.head());
-print("Basic Info:")
-print(df.info())
+Cleaned marketing dataset; removed duplicates, filled missing income, fixed shifted rows
 
-print("Descriptive Statistics:")
-print(df.describe(include='all'))
+## Summary of Data Cleaning
+- Removed  duplicate rows
+- Filled  missing values in 'Income' column 
+- Fixed  rows with shifted data due to extra column
+- Converted 'dt_customer' to proper date format
+- Standardized column names to lowercase with underscores
+- splits the  column header names by using split text to columns
+- 
 
-print("Column-wise Null Count:")
-print(df.isnull().sum())
 
-print("Column-wise Unique Value Count:")
-print(df.nunique())
-
-duplicates = df[df.duplicated()]
-print(duplicates.head())
-
-df = df.drop_duplicates()
-df=df.dropna();
 
