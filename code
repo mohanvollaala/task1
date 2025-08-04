@@ -16,6 +16,14 @@ print(df.nunique())
 duplicates = df[df.duplicated()]
 print(duplicates.head())
 
+df = df[df.columns[:29]]  
+
+df['Dt_Customer'] = pd.to_datetime(df['Dt_Customer'], errors='coerce')
+
+df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_')
+
+df['Marital_Status'].fillna(df['Marital_Status'].mode()[0], inplace=True)
+
 df = df.drop_duplicates()
 df=df.dropna();
 
